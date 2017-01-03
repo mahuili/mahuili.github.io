@@ -3,14 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>前端优化法则 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="说到前端优化的必修课，那就是Yahoo的前端优化性能规则，里面都是别人的经验总结，有 35 条之多，这是先分类在文章最后，之后会个别阐述我针对最初的 14 条，借鉴别人的翻译成果和我自己的解读。
+35条分类
+标注 ＊ 号的是最初的14条内容减少HTTP请求 减少DNS查询 避免重定向 Ajax缓存化 后载入组件预先载入组件减少DOM元素数量跨域分离组件最少化iframe避免404错误服务端使用CD">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端优化法则">
+<meta property="og:url" content="http://yoursite.com/2017/01/03/web/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="说到前端优化的必修课，那就是Yahoo的前端优化性能规则，里面都是别人的经验总结，有 35 条之多，这是先分类在文章最后，之后会个别阐述我针对最初的 14 条，借鉴别人的翻译成果和我自己的解读。
+35条分类
+标注 ＊ 号的是最初的14条内容减少HTTP请求 减少DNS查询 避免重定向 Ajax缓存化 后载入组件预先载入组件减少DOM元素数量跨域分离组件最少化iframe避免404错误服务端使用CD">
+<meta property="og:updated_time" content="2017-01-03T13:05:13.359Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="前端优化法则">
+<meta name="twitter:description" content="说到前端优化的必修课，那就是Yahoo的前端优化性能规则，里面都是别人的经验总结，有 35 条之多，这是先分类在文章最后，之后会个别阐述我针对最初的 14 条，借鉴别人的翻译成果和我自己的解读。
+35条分类
+标注 ＊ 号的是最初的14条内容减少HTTP请求 减少DNS查询 避免重定向 Ajax缓存化 后载入组件预先载入组件减少DOM元素数量跨域分离组件最少化iframe避免404错误服务端使用CD">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +69,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-web" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-web" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/01/03/web/" class="article-date">
   <time datetime="2017-01-03T13:04:40.000Z" itemprop="datePublished">2017-01-03</time>
@@ -74,8 +82,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/03/web/">前端优化法则</a>
+    <h1 class="article-title" itemprop="name">
+      前端优化法则
     </h1>
   
 
@@ -96,67 +104,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/03/hello/" class="article-date">
-  <time datetime="2017-01-03T12:57:13.000Z" itemprop="datePublished">2017-01-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/03/hello/">Git Push 避免用户名和密码方法</a>
-    </h1>
+    <a href="/2017/01/03/hello/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">Git Push 避免用户名和密码方法</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前言</p>
-<pre><code>在大家使用github的过程中，一定会碰到这样一种情况，就是每次要push 和pull时总是要输入github的账号和密码，这样不仅浪费了大量的时间且降低了工作效率。在此背景下，本文在网上找了两种方法来避免这种状况，这些成果也是先人提出来的，在此只是做个总结。
-</code></pre><p>1.方法一</p>
-<p>1.1 创建文件存储GIT用户名和密码</p>
-<p>在%HOME%目录中，一般为C:\users\Administrator，也可以是你自己创建的系统用户名目录，反正都在C:\users\中。文件名为.git-credentials,由于在Window中不允许直接创建以”.”开头的文件，所以需要借助git bash进行，打开git bash客户端，进行%HOME%目录，然后用touch创建文件 .git-credentials, 用vim编辑此文件，输入内容格式：</p>
-<p>touch .git-credentials</p>
-<p>vim .git-credentials</p>
-<p><a href="https://{username}:{password}@github.com" target="_blank" rel="external">https://{username}:{password}@github.com</a></p>
-<p>1.2 添加Git Config 内容</p>
-<p>进入git bash终端， 输入如下命令：</p>
-<p>git config –global credential.helper store</p>
-<p>执行完后查看%HOME%目录下的.gitconfig文件，会多了一项：</p>
-<p>[credential]</p>
-<pre><code>helper = store
-</code></pre><p>重新开启git bash会发现git push时不用再输入用户名和密码</p>
-<p>2.方法二</p>
-<p>2.1 添加环境变量</p>
-<p>在windows中添加一个HOME环境变量，变量名:HOME,变量值：%USERPROFILE%</p>
-<p>2.2 创建git用户名和密码存储文件</p>
-<p>进入%HOME%目录，新建一个名为”_netrc”的文件，文件中内容格式如下：</p>
-<p>machine {git account name}.github.com<br>login your-usernmae<br>password your-password<br>重新打开git bash即可，无需再输入用户名和密码</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/03/hello/" data-id="cixhj2rdr0000igvom4521quh" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
