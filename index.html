@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,47 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-pic" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/04/pic/" class="article-date">
+  <time datetime="2017-01-04T04:32:27.000Z" itemprop="datePublished">2017-01-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/04/pic/">mac safari 浏览器个人收藏栏不显示图标网站logo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##怎么能让那几个网址显示网站的logo 而不是safari自带的图标啊<br>那些网址的图标不是你能让他显示就显示的，个人收藏展示出来的网站大图标是因为网站有做了对应的大图标并且添加到了网页里面（通常是页头文件里面），然后Safari读取到大图标信息就会加载，读不到大图标信息自然不会加载，也就只能使用Safari自带的图标替代了。希望对你有所帮助。</p>
+<p>补充一下，网站添加大图标的具体做法是在页头添加代码</p>
+<link rel="apple-touch-icon" href="touch-icon-iphone.png">
+
+<p>href后面的值就是大图标文件了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/01/04/pic/" data-id="cixig82020000x4vo88384gty" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-web" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -90,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/03/web/" data-id="cixhj3nmk00018kvo5rhnjnz5" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/01/03/web/" data-id="cixig820w0002x4vo60df4e04" class="article-share-link">Share</a>
       
       
     </footer>
@@ -147,7 +188,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/03/hello/" data-id="cixhj3nlw00008kvom4b83v5t" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/01/03/hello/" data-id="cixig82080001x4vob0gfa7ym" class="article-share-link">Share</a>
       
       
     </footer>
@@ -182,9 +223,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/01/04/pic/">mac safari 浏览器个人收藏栏不显示图标网站logo</a>
+          </li>
         
           <li>
             <a href="/2017/01/03/web/">前端优化法则</a>
@@ -207,7 +252,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
