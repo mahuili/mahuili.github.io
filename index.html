@@ -61,6 +61,65 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-theme" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/04/theme/" class="article-date">
+  <time datetime="2017-01-04T07:20:50.000Z" itemprop="datePublished">2017-01-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/04/theme/">更换为next主题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>进入hexo站点文件夹</p>
+<p>cd your-hexo-site<br>clone Next代码并存放到 themes/next 目录下</p>
+<p>git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next<br>在站点 _config.yml 中修改:</p>
+<p>theme: next<br>Next 主题拥有”题中题”，可以在主题的 _config.yml 中设置：</p>
+<p>scheme: Mist  # 开启Next.Mist主题<br>设置头像</p>
+<p>在站点 _config.yml 中添加</p>
+<p>avatar: http://….  # 头像的URL<br>添加分类</p>
+<p>新建一个页面，命名为 categories</p>
+<p>hexo new page categories<br>在 source/categories 目录的 index.md 中修改:</p>
+<p>title: 分类<br>date: 2015-12-02 12:44:45</p>
+<h2 id="type-“categories”"><a href="#type-“categories”" class="headerlink" title="type: “categories”"></a>type: “categories”</h2><p>在主题的 _config.yml 中取消注释:</p>
+<p>categories: /categories<br>在要分类的文章中加入 category 属性:</p>
+<p>category: “hexo”  # 分类为 hexo<br>添加标签</p>
+<p>新建一个页面，命名为 tags</p>
+<p>hexo new page tags<br>在 source/tags 目录的 index.md 中修改:</p>
+<p>title: tags<br>date: 2015-12-02 12:10:34</p>
+<h2 id="type-“tags”"><a href="#type-“tags”" class="headerlink" title="type: “tags”"></a>type: “tags”</h2><p>在主题的 _config.yml 中取消注释:</p>
+<p>tags: /tags<br>在需要变迁的文章中加入 tgs 属性:</p>
+<p>tags: [spark,sparkSQL]  # 添加spark和sparkSQL两个标签<br>添加评论</p>
+<p>在 <a href="“http://duoshuo.com“">多说</a> 创建一个站点，创建时填写的多说域名就是你的 duoshuo_shortname</p>
+<p>在站点 _config.yml 中设置：</p>
+<p>duoshuo_shortname: your_duoshuo_shortname<br>更多功能</p>
+<p>参考 <a href="“http://theme-next.iissnan.com“">next官方帮助文档</a> <a href="http://theme-next.iissnan.com" target="_blank" rel="external">http://theme-next.iissnan.com</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/01/04/theme/" data-id="cixim8b3c0000qcvoqcmkg9gd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-pic" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/01/04/pic/" class="article-date">
@@ -95,7 +154,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/04/pic/" data-id="cixila8xp0002pkvohjzz87jr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/01/04/pic/" data-id="cixim8b3j0001qcvo0ceeme47" class="article-share-link">Share</a>
       
       
     </footer>
@@ -134,7 +193,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/03/web/" data-id="cixila8xm0001pkvo9pd59f3v" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/01/03/web/" data-id="cixim8b3r0003qcvo2ez26usm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -191,7 +250,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/03/hello/" data-id="cixila8xh0000pkvoxczc88ng" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/01/03/hello/" data-id="cixim8b3n0002qcvojz0eu5bv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -229,6 +288,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/01/04/theme/">更换为next主题</a>
+          </li>
         
           <li>
             <a href="/2017/01/04/pic/">mac safari 浏览器个人收藏栏不显示图标网站logo</a>
