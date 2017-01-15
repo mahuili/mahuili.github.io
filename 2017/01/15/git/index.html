@@ -6,24 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3220994945,3722488909&amp;fm=58">
-  <title>前端优化法则 | 薇_靓zw</title>
+  <title>Git仓库服务器SSH认证示例 | 薇_靓zw</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="说到前端优化的必修课，那就是Yahoo的前端优化性能规则，里面都是别人的经验总结，有 35 条之多，这是先分类在文章最后，之后会个别阐述我针对最初的 14 条，借鉴别人的翻译成果和我自己的解读。
-35条分类
-标注 ＊ 号的是最初的14条内容减少HTTP请求 减少DNS查询 避免重定向 Ajax缓存化 后载入组件预先载入组件减少DOM元素数量跨域分离组件最少化iframe避免404错误服务端使用CD">
+  <meta name="description" content="Git在用户管理及管理上，下面上三种解决办法：
+如果需要团队里的每个人都对仓库有写权限，又不能给每个人在服务器上建立账户，那么提供 SSH 连接就是唯一的选择了。我们假设用来共享仓库的服务器已经安装了 SSH 服务，而且你通过它访问服务器。
+有好几个办法可以让团队的每个人都有访问权。
+第一个办法是给每个人建立一个账户，直截了当但过于繁琐。反复的运行 adduser 并且给所有人设定临时密码可不是好">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端优化法则">
-<meta property="og:url" content="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3220994945,3722488909&fm=58/2017/01/03/web/index.html">
+<meta property="og:title" content="Git仓库服务器SSH认证示例">
+<meta property="og:url" content="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3220994945,3722488909&fm=58/2017/01/15/git/index.html">
 <meta property="og:site_name" content="薇_靓zw">
-<meta property="og:description" content="说到前端优化的必修课，那就是Yahoo的前端优化性能规则，里面都是别人的经验总结，有 35 条之多，这是先分类在文章最后，之后会个别阐述我针对最初的 14 条，借鉴别人的翻译成果和我自己的解读。
-35条分类
-标注 ＊ 号的是最初的14条内容减少HTTP请求 减少DNS查询 避免重定向 Ajax缓存化 后载入组件预先载入组件减少DOM元素数量跨域分离组件最少化iframe避免404错误服务端使用CD">
-<meta property="og:updated_time" content="2017-01-03T13:05:13.359Z">
+<meta property="og:description" content="Git在用户管理及管理上，下面上三种解决办法：
+如果需要团队里的每个人都对仓库有写权限，又不能给每个人在服务器上建立账户，那么提供 SSH 连接就是唯一的选择了。我们假设用来共享仓库的服务器已经安装了 SSH 服务，而且你通过它访问服务器。
+有好几个办法可以让团队的每个人都有访问权。
+第一个办法是给每个人建立一个账户，直截了当但过于繁琐。反复的运行 adduser 并且给所有人设定临时密码可不是好">
+<meta property="og:updated_time" content="2017-01-15T09:43:36.788Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端优化法则">
-<meta name="twitter:description" content="说到前端优化的必修课，那就是Yahoo的前端优化性能规则，里面都是别人的经验总结，有 35 条之多，这是先分类在文章最后，之后会个别阐述我针对最初的 14 条，借鉴别人的翻译成果和我自己的解读。
-35条分类
-标注 ＊ 号的是最初的14条内容减少HTTP请求 减少DNS查询 避免重定向 Ajax缓存化 后载入组件预先载入组件减少DOM元素数量跨域分离组件最少化iframe避免404错误服务端使用CD">
+<meta name="twitter:title" content="Git仓库服务器SSH认证示例">
+<meta name="twitter:description" content="Git在用户管理及管理上，下面上三种解决办法：
+如果需要团队里的每个人都对仓库有写权限，又不能给每个人在服务器上建立账户，那么提供 SSH 连接就是唯一的选择了。我们假设用来共享仓库的服务器已经安装了 SSH 服务，而且你通过它访问服务器。
+有好几个办法可以让团队的每个人都有访问权。
+第一个办法是给每个人建立一个账户，直截了当但过于繁琐。反复的运行 adduser 并且给所有人设定临时密码可不是好">
   
     <link rel="alternative" href="/atom.xml" title="薇_靓zw" type="application/atom+xml">
   
@@ -159,29 +162,59 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-web" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-git" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      前端优化法则
+      Git仓库服务器SSH认证示例
     </h1>
   
 
         
-        <a href="/2017/01/03/web/" class="archive-article-date">
-  	<time datetime="2017-01-03T13:04:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-03</time>
+        <a href="/2017/01/15/git/" class="archive-article-date">
+  	<time datetime="2017-01-15T09:42:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>说到前端优化的必修课，那就是Yahoo的前端优化性能规则，里面都是别人的经验总结，有 35 条之多，这是先分类在文章最后，之后会个别阐述我针对最初的 14 条，借鉴别人的翻译成果和我自己的解读。</p>
-<p>35条分类</p>
-<p>标注 ＊ 号的是最初的14条<br>内容<br>减少HTTP请求 <em><br>减少DNS查询 </em><br>避免重定向 <em><br>Ajax缓存化 </em><br>后载入组件<br>预先载入组件<br>减少DOM元素数量<br>跨域分离组件<br>最少化iframe<br>避免404错误<br>服务端<br>使用CDN（内容分布网络） <em><br>增加过期时间或者可控制缓存的请求头 </em><br>使用Gzip组件 <em><br>配置ETags（实体标签） </em><br>提前刷新缓冲区<br>Ajax请求使用Get方法<br>避免空的图片src<br>Cookie<br>减少Cookie大小<br>为组件使用无Cookie域<br>CSS<br>将样式放在顶部 <em><br>避免使用CSS表达式 </em><br>选择而不要@import<br>避免过滤器<br>JavaScript<br>将JS放在底部 <em><br>使用外部的JS和CSS </em><br>压缩JS和CSS <em><br>去掉重复的脚本 </em><br>最小化Dom读取<br>开发灵活的事件处理器<br>图片<br>优化图片<br>优化CSS Sprites（CSS精灵）<br>在HTML中不要缩放图片<br>制作小的和可缓存的favicon.ico<br>移动<br>组件维持在25kb以下<br>将组件放入复合的文档中</p>
+        <p>Git在用户管理及管理上，下面上三种解决办法：</p>
+<p>如果需要团队里的每个人都对仓库有写权限，又不能给每个人在服务器上建立账户，那么提供 SSH 连接就是唯一的选择了。我们假设用来共享仓库的服务器已经安装了 SSH 服务，而且你通过它访问服务器。</p>
+<p>有好几个办法可以让团队的每个人都有访问权。</p>
+<p>第一个办法是给每个人建立一个账户，直截了当但过于繁琐。反复的运行 adduser 并且给所有人设定临时密码可不是好玩的。</p>
+<p>第二个办法是在主机上建立一个 git 账户，让每个需要写权限的人发送一个 SSH 公钥，然后将其加入 git 账户的 ~/.ssh /authorized_keys 文件。这样一来，所有人都将通过 git 账户访问主机。这丝毫不会影响提交的数据——访问主机用的身份不会影响 commit的记录。</p>
+<p>另一个办法是让 SSH 服务器通过某个 LDAP 服务，或者其他已经设定好的集中授权机制，来进行授权。只要每个人都能获得主机的 shell 访问权，任何可用的 SSH 授权机制都能达到相同效  # 如果需要团队里的每个人都对仓库有写权限，又不能给每个人在服务器上建立账户，那么提供 SSH 连接就是唯一的选择了。我们假设用来共享仓库的服务器已经安装了 SSH 服务，而且你通过它访问服务器。</p>
+<p>git 共享仓库服务器： Linuxidc.lansgg.com 192.168.100.128</p>
+<p>git 客户测试机：    node1.lansgg.com    192.168.100.129</p>
+<p>方法一 示例、</p>
+<p>git 仓库服务器，新建仓库，测试机获取git仓库，修改，远程上传。ssh 方式<br>[root@Linuxidc ~]# useradd -d /opt/gitServer gitServer<br>[root@Linuxidc ~]# echo “git”|passwd –stdin gitServer<br>更改用户 gitServer 的密码 。<br>passwd： 所有的身份验证令牌已经成功更新。<br>[root@Linuxidc ~]# yum install git -y<br>[root@Linuxidc ~]# su - gitServer<br>[gitServer@Linuxidc ~]$ ls<br>[gitServer@Linuxidc ~]$ mkdir TestProject.git<br>[gitServer@Linuxidc ~]$ cd TestProject.git/<br>[gitServer@Linuxidc TestProject.git]$ git –bare init<br>Initialized empty Git repository in /opt/gitServer/TestProject.git/<br>[gitServer@Linuxidc TestProject.git]$ ls<br>branches  config  description  HEAD  hooks  info  objects  refs</p>
+<p>客户测试机</p>
+<p>[root@node1 ~]# useradd -d /opt/gitServer gitServer<br>[root@node1 ~]# echo “gitServer” |passwd –stdin gitServer<br>更改用户 gitServer 的密码 。<br>passwd： 所有的身份验证令牌已经成功更新。<br>[root@node1 ~]# su - gitServer<br>[root@node1 ~]# git clone gitServer@192.168.100.128:/opt/gitServer/TestProject.git<br>Initialized empty Git repository in /root/TestProject/.git/<br>The authenticity of host ‘192.168.100.128 (192.168.100.128)’ can’t be established.<br>RSA key fingerprint is 9f:32:3a:b0:db:03:b6:c8:fc:a0:47:6c:e5:d1:b0:6a.<br>Are you sure you want to continue connecting (yes/no)? yes<br>Warning: Permanently added ‘192.168.100.128’ (RSA) to the list of known hosts.<br>gitServer@192.168.100.128’s password:<br>warning: You appear to have cloned an empty repository.<br>[root@node1 ~]# ls<br>anaconda-ks.cfg  install.log  install.log.syslog  TestProject<br>[root@node1 ~]# cd TestProject/<br>[root@node1 TestProject]# echo “test file” &gt; test.file<br>[root@node1 TestProject]# git add test.file<br>[root@node1 TestProject]# git config –global user.name “gitServer”<br>[root@node1 TestProject]# git config –global user.email git@lansgg.com<br>[root@node1 TestProject]# git commit -m “test commit” test.file<br>[master 96bf273] test commit<br> 1 files changed, 1 insertions(+), 1 deletions(-)<br>[gitServer@node1 TestProject]$ git remote add test_remote_origin ssh://192.168.100.128/opt/gitServer/TestProject.git<br>[gitServer@node1 TestProject]$ git push test_remote_origin master<br>gitServer@192.168.100.128’s password:<br>Counting objects: 5, done.<br>Writing objects: 100% (3/3), 252 bytes, done.<br>Total 3 (delta 0), reused 0 (delta 0)<br>To ssh://192.168.100.128/opt/gitServer/TestProject.git<br>  7e2e4a4..96bf273  master -&gt; master</p>
+<p>git 仓库服务端</p>
+<p>[gitServer@Linuxidc TestProject.git]$ git log<br>commit 96bf2738c6602283ea91778b999f7adf66c0082c<br>Author: gitServer <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#103;&#105;&#x74;&#83;&#x65;&#x72;&#x76;&#x65;&#x72;&#x40;&#x6c;&#97;&#x6e;&#115;&#103;&#x67;&#46;&#99;&#111;&#109;">&#103;&#105;&#x74;&#83;&#x65;&#x72;&#x76;&#x65;&#x72;&#x40;&#x6c;&#97;&#x6e;&#115;&#103;&#x67;&#46;&#99;&#111;&#109;</a><br>Date:  Tue Sep 22 17:05:12 2015 +0800</p>
+<pre><code>test commit
+</code></pre><p>我们可以随便找个目录clone下，看看是否存在 刚刚提交的 test.file</p>
+<p>[root@Linuxidc ~]# mkdir /opt/tt<br>[root@Linuxidc ~]# cd /opt/tt<br>[root@Linuxidc tt]# git clone gitServer@192.168.100.128:/opt/gitServer/TestProject.git<br>Initialized empty Git repository in /opt/tt/TestProject/.git/<br>The authenticity of host ‘192.168.100.128 (192.168.100.128)’ can’t be established.<br>RSA key fingerprint is 9f:32:3a:b0:db:03:b6:c8:fc:a0:47:6c:e5:d1:b0:6a.<br>Are you sure you want to continue connecting (yes/no)? yes<br>Warning: Permanently added ‘192.168.100.128’ (RSA) to the list of known hosts.<br>gitServer@192.168.100.128’s password:<br>remote: Counting objects: 6, done.<br>remote: Compressing objects: 100% (2/2), done.<br>Receiving objects: 100% (6/6), 435 bytes, done.<br>remote: Total 6 (delta 0), reused 0 (delta 0)<br>[root@Linuxidc tt]# ls<br>TestProject<br>[root@Linuxidc tt]# cd TestProject/<br>[root@Linuxidc TestProject]# ls<br>test.file<br>[root@Linuxidc TestProject]# cat test.file<br>test file abc<br>[root@Linuxidc TestProject]#</p>
+<p>方法二  示例、</p>
+<p>在测试机创建两个账户 user1 user2，分别将秘钥上传至git 仓库侧，</p>
+<p>[root@node1 ~]# useradd -d /opt/user1 user1<br>[root@node1 ~]# echo “user1” |passwd –stdin user1<br>更改用户 user1 的密码 。<br>passwd： 所有的身份验证令牌已经成功更新。<br>[root@node1 ~]# useradd -d /opt/user2 user2<br>[root@node1 ~]# echo “user2” |passwd –stdin user2<br>更改用户 user2 的密码 。<br>passwd： 所有的身份验证令牌已经成功更新。<br>[root@node1 ~]#</p>
+<p>[root@node1 ~]# su - user1<br>[user1@node1 ~]$ ssh-keygen -t rsa<br>[root@node1 ~]# su - user2<br>[user1@node1 ~]$ ssh-keygen -t rsa</p>
+<p>分别将user1、user2 用户的公钥新增git仓库服务器侧的</p>
+<p>[user2@node1 .ssh]$ pwd<br>/opt/user2/.ssh<br>[user2@node1 .ssh]$ ll<br>总用量 8<br>-rw——-. 1 user2 user2 1671 9月  22 17:18 id_rsa<br>-rw-r–r–. 1 user2 user2  404 9月  22 17:18 id_rsa.pub<br>[user2@node1 .ssh]$ cat id_rsa.pub<br>ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAp0Im8iL7UR2b0PWrJ98YY/nqvjnuYWNc2F52SYn1/WA8rwGBWW0WBmKMoyW8YfSpCVk7QbyhX48Y3KF/Gf16CWRMm8xuyA+S5Seq3ZGnLbbVhb0OMO8VDAldovnIuPdI6005+ux/WbG1FKr3WxGs5k92ZO9hbXxpcVAwpvHY47t1v2LH5fW2jThypWMolUdp9TaNy7FkD2zaUNhbdqM1w67OSydiHAMfj183sEso9TykiXJvwlJeLdUMFywPTwfVqu2rxV0lY68B2mwr1pl5mcGPA4/0ruX8vSFsFLev8+yi7LjccChAu/suPIFGLqRXrkW8ymsN/l3CkldnS9Y0BQ== user2@node1.lansgg.com<br>[user2@node1 .ssh]$</p>
+<p>git 仓库服务侧</p>
+<p>[gitServer@Linuxidc ~]$ mkdir .ssh &amp;&amp; chmod 700 .ssh<br>[gitServer@Linuxidc ~]$ touch .ssh/authorized_keys &amp;&amp; chmod 600 .ssh/authorized_keys</p>
+<p>[gitServer@Linuxidc ~]$ cat .ssh/authorized_keys<br>ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA1pII1U64N/wl1OXotWdcU8d8+ad0q6tkqdBgXLcR5zqXIq9PPe1NeLJ5HS9UIvZeN/LEyXGYh+fyg8tFQ+2PN3CmxnVwwcciyl1AKAgTeKUdleh8qcXPZkI0YZBpgTbuYWYHNjA6Qd9cvJSdKe9cVvwsv7N1z17Mx1uIfNSuSZ9e4XqUsJksBAzAYEGar4S13+Y/il7lquwkrdVBiWfWHmf/WoeY2RnzNBe9YtPVFUPL8HEoYyYaU+YXXMZKOZ8JwuLu1CPDJHTquSTyqdEwmgJWDdoiipgtyVOEVGZC0CqV16M2YpVqw26rrZ+nXUQYEnTrWyIiqt8/xvzmeDIf0Q== user1@node1.lansgg.com<br>ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAp0Im8iL7UR2b0PWrJ98YY/nqvjnuYWNc2F52SYn1/WA8rwGBWW0WBmKMoyW8YfSpCVk7QbyhX48Y3KF/Gf16CWRMm8xuyA+S5Seq3ZGnLbbVhb0OMO8VDAldovnIuPdI6005+ux/WbG1FKr3WxGs5k92ZO9hbXxpcVAwpvHY47t1v2LH5fW2jThypWMolUdp9TaNy7FkD2zaUNhbdqM1w67OSydiHAMfj183sEso9TykiXJvwlJeLdUMFywPTwfVqu2rxV0lY68B2mwr1pl5mcGPA4/0ruX8vSFsFLev8+yi7LjccChAu/suPIFGLqRXrkW8ymsN/l3CkldnS9Y0BQ== user2@node1.lansgg.com<br>[gitServer@Linuxidc ~]$</p>
+<p>客户测试机  无需用户名、密码</p>
+<p>[user1@node1 ~]$ git clone gitServer@192.168.100.128:/opt/gitServer/TestProject.git<br>Initialized empty Git repository in /opt/user1/TestProject/.git/<br>The authenticity of host ‘192.168.100.128 (192.168.100.128)’ can’t be established.<br>RSA key fingerprint is 9f:32:3a:b0:db:03:b6:c8:fc:a0:47:6c:e5:d1:b0:6a.<br>Are you sure you want to continue connecting (yes/no)? yes<br>Warning: Permanently added ‘192.168.100.128’ (RSA) to the list of known hosts.<br>remote: Counting objects: 9, done.<br>remote: Compressing objects: 100% (3/3), done.<br>remote: Total 9 (delta 0), reused 0 (delta 0)<br>Receiving objects: 100% (9/9), done.<br>[user1@node1 ~]$</p>
+<p>如果提交过程：提示如下错误</p>
+<p>Counting objects: 3, done.<br>Writing objects: 100% (3/3), 247 bytes | 0 bytes/s, done.<br>Total 3 (delta 0), reused 0 (delta 0)<br>remote: error: refusing to update checked out branch: refs/heads/master<br>remote: error: By default, updating the current branch in a non-bare repository<br>remote: error: is denied, because it will make the index and work tree inconsistent<br>remote: error: with what you pushed, and will require ‘git reset –hard’ to match<br>remote: error: the work tree to HEAD.<br>remote: error:<br>remote: error: You can set ‘receive.denyCurrentBranch’ configuration variable to<br>remote: error: ‘ignore’ or ‘warn’ in the remote repository to allow pushing into<br>remote: error: its current branch; however, this is not recommended unless you<br>remote: error: arranged to update its work tree to match what you pushed in some<br>remote: error: other way.<br>remote: error:<br>remote: error: To squelch this message and still keep the default behaviour, set<br>remote: error: ‘receive.denyCurrentBranch’ configuration variable to ‘refuse’.</p>
+<p>试着将如下配置新增到</p>
+<p>[git@JumpServer1 pl.git]$ cat .git/config<br>[receive]<br>denyCurrentBranch = ignore</p>
+<p>再次提交</p>
 
       
 
@@ -261,7 +294,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3220994945,3722488909&fm=58/2017/01/03/web/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3220994945,3722488909&fm=58/2017/01/15/git/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -275,18 +308,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/01/04/pic/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          mac safari 浏览器个人收藏栏不显示图标网站logo
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/01/03/hello/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Git Push 避免用户名和密码方法</div>
+    <a href="/2017/01/04/theme2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo(3)-安装自己喜欢的主题</div>
       <i class="icon-circle-right"></i>
     </a>
   

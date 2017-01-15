@@ -6,24 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3220994945,3722488909&amp;fm=58">
-  <title>前端优化法则 | 薇_靓zw</title>
+  <title>Archives: 2017 | 薇_靓zw</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="说到前端优化的必修课，那就是Yahoo的前端优化性能规则，里面都是别人的经验总结，有 35 条之多，这是先分类在文章最后，之后会个别阐述我针对最初的 14 条，借鉴别人的翻译成果和我自己的解读。
-35条分类
-标注 ＊ 号的是最初的14条内容减少HTTP请求 减少DNS查询 避免重定向 Ajax缓存化 后载入组件预先载入组件减少DOM元素数量跨域分离组件最少化iframe避免404错误服务端使用CD">
-<meta property="og:type" content="article">
-<meta property="og:title" content="前端优化法则">
-<meta property="og:url" content="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3220994945,3722488909&fm=58/2017/01/03/web/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="薇_靓zw">
+<meta property="og:url" content="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3220994945,3722488909&fm=58/archives/2017/page/2/index.html">
 <meta property="og:site_name" content="薇_靓zw">
-<meta property="og:description" content="说到前端优化的必修课，那就是Yahoo的前端优化性能规则，里面都是别人的经验总结，有 35 条之多，这是先分类在文章最后，之后会个别阐述我针对最初的 14 条，借鉴别人的翻译成果和我自己的解读。
-35条分类
-标注 ＊ 号的是最初的14条内容减少HTTP请求 减少DNS查询 避免重定向 Ajax缓存化 后载入组件预先载入组件减少DOM元素数量跨域分离组件最少化iframe避免404错误服务端使用CD">
-<meta property="og:updated_time" content="2017-01-03T13:05:13.359Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端优化法则">
-<meta name="twitter:description" content="说到前端优化的必修课，那就是Yahoo的前端优化性能规则，里面都是别人的经验总结，有 35 条之多，这是先分类在文章最后，之后会个别阐述我针对最初的 14 条，借鉴别人的翻译成果和我自己的解读。
-35条分类
-标注 ＊ 号的是最初的14条内容减少HTTP请求 减少DNS查询 避免重定向 Ajax缓存化 后载入组件预先载入组件减少DOM元素数量跨域分离组件最少化iframe避免404错误服务端使用CD">
+<meta name="twitter:title" content="薇_靓zw">
   
     <link rel="alternative" href="/atom.xml" title="薇_靓zw" type="application/atom+xml">
   
@@ -159,149 +149,53 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-web" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      前端优化法则
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/01/03/hello/" class="archive-article-date">
+  	<time datetime="2017-01-03T12:57:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-03</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/01/03/hello/">Git Push 避免用户名和密码方法</a>
     </h1>
   
 
-        
-        <a href="/2017/01/03/web/" class="archive-article-date">
-  	<time datetime="2017-01-03T13:04:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>说到前端优化的必修课，那就是Yahoo的前端优化性能规则，里面都是别人的经验总结，有 35 条之多，这是先分类在文章最后，之后会个别阐述我针对最初的 14 条，借鉴别人的翻译成果和我自己的解读。</p>
-<p>35条分类</p>
-<p>标注 ＊ 号的是最初的14条<br>内容<br>减少HTTP请求 <em><br>减少DNS查询 </em><br>避免重定向 <em><br>Ajax缓存化 </em><br>后载入组件<br>预先载入组件<br>减少DOM元素数量<br>跨域分离组件<br>最少化iframe<br>避免404错误<br>服务端<br>使用CDN（内容分布网络） <em><br>增加过期时间或者可控制缓存的请求头 </em><br>使用Gzip组件 <em><br>配置ETags（实体标签） </em><br>提前刷新缓冲区<br>Ajax请求使用Get方法<br>避免空的图片src<br>Cookie<br>减少Cookie大小<br>为组件使用无Cookie域<br>CSS<br>将样式放在顶部 <em><br>避免使用CSS表达式 </em><br>选择而不要@import<br>避免过滤器<br>JavaScript<br>将JS放在底部 <em><br>使用外部的JS和CSS </em><br>压缩JS和CSS <em><br>去掉重复的脚本 </em><br>最小化Dom读取<br>开发灵活的事件处理器<br>图片<br>优化图片<br>优化CSS Sprites（CSS精灵）<br>在HTML中不要缩放图片<br>制作小的和可缓存的favicon.ico<br>移动<br>组件维持在25kb以下<br>将组件放入复合的文档中</p>
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3220994945,3722488909&fm=58/2017/01/03/web/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/01/04/pic/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          mac safari 浏览器个人收藏栏不显示图标网站logo
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/01/03/hello/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Git Push 避免用户名和密码方法</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-
-  
-    <div class="duoshuo"></div>
+    </div></section>
   
 
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2017/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 
 
           </div>
@@ -324,8 +218,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
